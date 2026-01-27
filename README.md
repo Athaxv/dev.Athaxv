@@ -146,7 +146,7 @@ Edit the following files to customize your portfolio:
 
 #### Update Logo
 
-Replace `public/images/ipsum.svg` with your logo. The logo component is located at `src/components/chanhdai-mark.tsx`.
+Replace `public/images/ipsum.svg` with your logo. The logo component is located at `src/components/site-header-mark.tsx`.
 
 #### Customize Theme
 
@@ -214,13 +214,7 @@ Licensed under the [MIT license](./LICENSE).
 
 You're free to use this code! Just make sure to **remove all personal information** before publishing your website.
 
-## Acknowledgments
-
-This portfolio is inspired by and built upon the excellent work of:
-
-- [chanhdai.com](https://chanhdai.com) by [Nguyen Chanh Dai](https://github.com/ncdai) - Original design and architecture
-
-### Technologies Used
+## Technologies Used
 
 - [React](https://react.dev) - UI library
 - [Next.js](https://nextjs.org) - React framework
@@ -239,7 +233,7 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## Contact
 
-- **Website**: [safeedaadmi.dev](https://safeedaadmi.dev)
+- **Website**: [athaxv.me](https://athaxv.me)
 - **GitHub**: [@Athaxv](https://github.com/Athaxv)
 - **Twitter**: [@Athaxv05](https://x.com/Athaxv05)
 - **LinkedIn**: [Atharv Gaur](https://www.linkedin.com/in/athaxv/)

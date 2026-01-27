@@ -9,7 +9,7 @@ export function SiteHeaderMark() {
       alt="Logo"
       width={32}
       height={32}
-      className="h-8 w-auto"
+      className="h-8 w-auto brightness-0 dark:brightness-0 dark:invert"
       priority
     />
   );
