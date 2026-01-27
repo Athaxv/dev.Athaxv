@@ -37,13 +37,7 @@ export function SiteHeader() {
         data-header-container
       >
         <BrandContextMenu>
-          <Link
-            className="has-data-[visible=false]:pointer-events-none [&_svg]:h-8"
-            href="/"
-            aria-label="Home"
-          >
-            <SiteHeaderMark />
-          </Link>
+          <SiteHeaderMark />
         </BrandContextMenu>
 
         <div className="flex-1" />

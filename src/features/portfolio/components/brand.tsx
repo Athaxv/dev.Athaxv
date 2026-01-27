@@ -40,17 +40,6 @@ export function Brand() {
 
       <div className="space-y-1 text-sm text-muted-foreground">
         <p>Made by Athaxv</p>
-        <p>
-          Inspired from{" "}
-          <Link
-            href="https://chanhdai.com/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="underline underline-offset-4 hover:text-foreground"
-          >
-            chanhdai
-          </Link>
-        </p>
       </div>
     </footer>
   );
