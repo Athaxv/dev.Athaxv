@@ -49,28 +49,28 @@ export const PROJECTS: Project[] = [
     },
     image: "/images/exaclidrawreal.png",
   },
-  {
-    id: "randomecho",
-    title: "RandomEcho",
-    description:
-      "A safe, private platform where your identity remains yours alone. Anonymously connect and speak freely.",
-    link: "https://randomecho.onrender.com/",
-    skills: ["TypeScript", "Real-time"],
-    period: {
-      start: "2024",
-    },
-    image: "/images/projects/randomecho.png",
-  },
-  {
-    id: "saulm",
-    title: "SauLM",
-    description:
-      "An AI-powered persona-based legal assistant.",
-    link: "https://github.com/Athaxv/SauLM",
-    skills: ["TypeScript", "AI", "Legal"],
-    period: {
-      start: "2024",
-    },
-    image: "/images/projects/saulm.png",
-  }
+  // {
+  //   id: "randomecho",
+  //   title: "RandomEcho",
+  //   description:
+  //     "A safe, private platform where your identity remains yours alone. Anonymously connect and speak freely.",
+  //   link: "https://randomecho.onrender.com/",
+  //   skills: ["TypeScript", "Real-time"],
+  //   period: {
+  //     start: "2024",
+  //   },
+  //   image: "/images/projects/randomecho.png",
+  // },
+  // {
+  //   id: "saulm",
+  //   title: "SauLM",
+  //   description:
+  //     "An AI-powered persona-based legal assistant.",
+  //   link: "https://github.com/Athaxv/SauLM",
+  //   skills: ["TypeScript", "AI", "Legal"],
+  //   period: {
+  //     start: "2024",
+  //   },
+  //   image: "/images/projects/saulm.png",
+  // }
 ];

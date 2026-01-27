@@ -136,7 +136,20 @@ export function CommandMenu() {
       if (openInNewTab) {
         window.open(href, "_blank", "noopener");
       } else {
-        router.push(href);
+        // Handle anchor links with smooth scrolling
+        const url = new URL(href, window.location.origin);
+        if (url.hash) {
+          router.push(href);
+          // Wait for navigation to complete, then scroll smoothly to anchor
+          setTimeout(() => {
+            const element = document.querySelector(url.hash);
+            if (element) {
+              element.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+          }, 100);
+        } else {
+          router.push(href);
+        }
       }
     },
     [router]

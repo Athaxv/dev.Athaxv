@@ -1,13 +1,15 @@
 import { unstable_cache } from "next/cache";
 
 import { GitHubStars } from "@/components/github-stars";
-import { SOURCE_CODE_GITHUB_REPO } from "@/config/site";
+
+// Navbar-specific GitHub repo (different from SOURCE_CODE_GITHUB_REPO)
+const NAVBAR_GITHUB_REPO = "Athaxv/dev.Athaxv";
 
 const getStargazerCount = unstable_cache(
   async () => {
     try {
       const response = await fetch(
-        `https://api.github.com/repos/${SOURCE_CODE_GITHUB_REPO}`,
+        `https://api.github.com/repos/${NAVBAR_GITHUB_REPO}`,
         {
           headers: {
             Accept: "application/vnd.github+json",
@@ -27,7 +29,7 @@ const getStargazerCount = unstable_cache(
       return 0;
     }
   },
-  ["github-stargazer-count"],
+  ["github-stargazer-count-navbar"],
   { revalidate: 86400 } // Cache for 1 day (86400 seconds)
 );
 
@@ -36,7 +38,7 @@ export async function NavItemGitHub() {
 
   return (
     <GitHubStars
-      repo={SOURCE_CODE_GITHUB_REPO}
+      repo={NAVBAR_GITHUB_REPO}
       stargazersCount={stargazersCount}
     />
   );

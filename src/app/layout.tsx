@@ -108,7 +108,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fontMono.variable} ${fontSerif.variable}`}
+      className={`${fontMono.variable} ${fontSerif.variable} scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
