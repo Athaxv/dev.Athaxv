@@ -36,7 +36,7 @@ export function ProfileCover() {
           onEnded={handleEnded}
           className="absolute inset-0 size-full object-cover"
         >
-          <source src="/edit/okone.mp4" type="video/mp4" />
+          <source src="/edit/choice.mp4" type="video/mp4" />
         </video>
       </div>
     </BrandContextMenu>
