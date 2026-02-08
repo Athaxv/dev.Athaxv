@@ -8,22 +8,17 @@ export const USER = {
   gender: "male",
   pronouns: "he/him",
   bio: "Architecting fullstack magic. Turning complex problems into sleek digital adventures.",
-  flipSentences: [
-    "Fullstack Developer",
-    "VibeCoder",
-    "20, Dev",
-    "Builder",
-  ],
+  flipSentences: ["Fullstack Developer", "VibeCoder", "20, Dev", "Builder"],
   address: "India",
   phoneNumber: "OTYyNTIyMjEzMQ==", // 9625222131 base64
   email: "laatharv@gmail.com", // laatharv@gmail.com base64
-  website: "https://safeedaadmi.dev",
+  website: "https://athaxv.dev",
   jobTitle: "Fullstack Developer",
   jobs: [
     {
       title: "Fullstack Developer",
       company: "Freelance",
-      website: "https://safeedaadmi.dev",
+      website: "https://athaxv.dev",
     },
   ],
   about: `

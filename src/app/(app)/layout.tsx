@@ -24,7 +24,9 @@ export default function AppLayout({ children }: { children: React.ReactNode }) {
       <div className="flex justify-center">
         <VerticalPatternSeparator className="hidden w-12 border-x border-b border-edge before:w-12 md:block" />
         <div className="flex min-h-screen w-full flex-col border-b border-edge bg-background md:max-w-3xl">
-          <main className="flex-1 overflow-x-hidden">{children}</main>
+          <main className="no-scrollbar flex-1 overflow-x-hidden">
+            {children}
+          </main>
           <SiteFooter />
         </div>
         <VerticalPatternSeparator className="hidden w-12 border-x border-b border-edge before:w-12 md:block" />

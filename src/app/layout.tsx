@@ -5,7 +5,6 @@ import Script from "next/script";
 import { NuqsAdapter } from "nuqs/adapters/next/app";
 import type { WebSite, WithContext } from "schema-dts";
 
-
 import { ConsentManager } from "@/components/consent-manager";
 import { Providers } from "@/components/providers";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
@@ -108,7 +107,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${fontMono.variable} ${fontSerif.variable} scroll-smooth`}
+      className={`${fontMono.variable} ${fontSerif.variable} overflow-x-hidden scroll-smooth`}
       suppressHydrationWarning
     >
       <head>
@@ -134,13 +133,12 @@ export default function RootLayout({
       </head>
 
       <body>
-
         <Providers>
           <NuqsAdapter>
             <ConsentManager>{children}</ConsentManager>
           </NuqsAdapter>
         </Providers>
       </body>
-    </html >
+    </html>
   );
 }
