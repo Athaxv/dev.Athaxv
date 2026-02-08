@@ -3,6 +3,7 @@
 import { useRef } from "react";
 
 import { BrandContextMenu } from "@/components/brand-context-menu";
+import { VisitorBadge } from "@/components/visitor-badge";
 import { cn } from "@/lib/utils";
 
 export function ProfileCover() {
@@ -38,6 +39,8 @@ export function ProfileCover() {
         >
           <source src="/edit/choice.mp4" type="video/mp4" />
         </video>
+
+        <VisitorBadge />
       </div>
     </BrandContextMenu>
   );
