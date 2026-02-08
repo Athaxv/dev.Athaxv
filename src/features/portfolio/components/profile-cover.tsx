@@ -1,7 +1,20 @@
+"use client";
+
+import { useRef } from "react";
+
 import { BrandContextMenu } from "@/components/brand-context-menu";
 import { cn } from "@/lib/utils";
 
 export function ProfileCover() {
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const handleEnded = () => {
+    if (videoRef.current) {
+      videoRef.current.currentTime = 0;
+      videoRef.current.play();
+    }
+  };
+
   return (
     <BrandContextMenu>
       <div
@@ -14,18 +27,17 @@ export function ProfileCover() {
         )}
       >
         <video
+          ref={videoRef}
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
+          onEnded={handleEnded}
           className="absolute inset-0 size-full object-cover"
         >
-          <source src="/edit/cover-video.mp4" type="video/mp4" />
+          <source src="/edit/okone.mp4" type="video/mp4" />
         </video>
-        {/* <ChanhDaiMark
-          id="js-cover-mark"
-          className="h-14 w-28 sm:h-16 sm:w-32"
-        /> */}
       </div>
     </BrandContextMenu>
   );

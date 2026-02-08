@@ -4,10 +4,7 @@ import { PatternSeparator } from "@/components/pattern-separator";
 import { Separator } from "@/components/ui/separator";
 import { GITHUB_USERNAME } from "@/config/site";
 import { About } from "@/features/portfolio/components/about";
-import { Blog } from "@/features/portfolio/components/blog";
-import { Brand } from "@/features/portfolio/components/brand";
 import { Certifications } from "@/features/portfolio/components/certifications";
-import { Components } from "@/features/portfolio/components/components";
 import { Experiences } from "@/features/portfolio/components/experiences";
 import { GitHubContributions } from "@/features/portfolio/components/github-contributions";
 import { Overview } from "@/features/portfolio/components/overview";
@@ -16,11 +13,8 @@ import { ProfileHeader } from "@/features/portfolio/components/profile-header";
 import { Projects } from "@/features/portfolio/components/projects";
 import { RecentPrs } from "@/features/portfolio/components/recent-prs";
 import { SocialLinks } from "@/features/portfolio/components/social-links";
-import { TeckStack } from "@/features/portfolio/components/teck-stack";
-import { TestimonialsMarquee } from "@/features/portfolio/components/testimonials-marquee";
 import { USER } from "@/features/portfolio/data/user";
 import { getGitHubData } from "@/lib/github";
-import { cn } from "@/lib/utils";
 
 export default async function Page() {
   const githubData = await getGitHubData(GITHUB_USERNAME);
@@ -48,19 +42,13 @@ export default async function Page() {
         <About />
         <PatternSeparator />
 
-        {/* <TestimonialsMarquee /> */}
         <PatternSeparator />
 
         <GitHubContributions contributions={githubData.contributions} />
         <PatternSeparator />
 
-        {/* <TeckStack /> */}
-        {/* <Separator /> */}
-
-        {/* <Components /> */}
         <Separator />
 
-        {/* <Blog /> */}
         <PatternSeparator />
 
         <Experiences />
@@ -74,9 +62,6 @@ export default async function Page() {
 
         <Certifications />
         <PatternSeparator />
-
-        {/* <Brand /> */}
-        {/* <Separator /> */}
       </div>
     </>
   );

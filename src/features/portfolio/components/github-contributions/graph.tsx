@@ -18,24 +18,18 @@ import {
   ContributionGraphTotalCount,
 } from "@/components/kibo-ui/contribution-graph";
 import { GITHUB_USERNAME, UTM_PARAMS } from "@/config/site";
+import { cn } from "@/lib/utils";
 import { addQueryParams } from "@/utils/url";
 
-import { cn } from "@/lib/utils";
-
-
 const THEME_CLASS = cn(
-  "data-[level='0']:fill-primary data-[level='0']:fill-opacity-10",
-  "data-[level='1']:fill-primary data-[level='1']:fill-opacity-30",
-  "data-[level='2']:fill-primary data-[level='2']:fill-opacity-50",
-  "data-[level='3']:fill-primary data-[level='3']:fill-opacity-70",
+  "data-[level='0']:fill-opacity-10 data-[level='0']:fill-primary",
+  "data-[level='1']:fill-opacity-30 data-[level='1']:fill-primary",
+  "data-[level='2']:fill-opacity-50 data-[level='2']:fill-primary",
+  "data-[level='3']:fill-opacity-70 data-[level='3']:fill-primary",
   "data-[level='4']:fill-primary"
 );
 
-export function GitHubContributionGraph({
-  data,
-}: {
-  data: Activity[];
-}) {
+export function GitHubContributionGraph({ data }: { data: Activity[] }) {
   return (
     <TooltipProvider>
       <ContributionGraph
@@ -80,9 +74,10 @@ export function GitHubContributionGraph({
           <ContributionGraphTotalCount>
             {({ totalCount, year }) => (
               <div className="text-muted-foreground">
-                {new Intl.NumberFormat("en-US").format(totalCount)} contributions in {year} on{" "}
+                {new Intl.NumberFormat("en-US").format(totalCount)}{" "}
+                contributions in {year} on{" "}
                 <a
-                  className="font-medium underline underline-offset-4 hover:text-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
+                  className="font-medium underline underline-offset-4 hover:text-foreground focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:outline-none"
                   href={addQueryParams(
                     `https://github.com/${GITHUB_USERNAME}`,
                     UTM_PARAMS
@@ -99,14 +94,16 @@ export function GitHubContributionGraph({
 
           <ContributionGraphLegend>
             {({ level }) => (
-              <rect
-                width={11}
-                height={11}
-                rx={2}
-                ry={2}
-                className={THEME_CLASS}
-                data-level={level}
-              />
+              <svg width={11} height={11}>
+                <rect
+                  width={11}
+                  height={11}
+                  rx={2}
+                  ry={2}
+                  className={THEME_CLASS}
+                  data-level={level}
+                />
+              </svg>
             )}
           </ContributionGraphLegend>
         </ContributionGraphFooter>
@@ -114,7 +111,6 @@ export function GitHubContributionGraph({
     </TooltipProvider>
   );
 }
-
 
 export function GitHubContributionFallback() {
   return (
