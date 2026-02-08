@@ -11,48 +11,41 @@ import { useSound } from "@/hooks/use-sound";
 import { MoonIcon } from "./animated-icons/moon";
 import { SunMediumIcon } from "./animated-icons/sun-medium";
 import { Tooltip, TooltipContent, TooltipTrigger } from "./base/ui/tooltip";
+import { useThemeToggle } from "./skiper/skiper26";
 import { Button } from "./ui/button";
 import { Kbd } from "./ui/kbd";
 
 export function ThemeToggle() {
-  const { resolvedTheme, setTheme } = useTheme();
-
+  const { resolvedTheme } = useTheme();
   const { setMetaColor } = useMetaColor();
-
   const playClick = useSound("/audio/ui-sounds/click.wav");
 
-  const switchTheme = useCallback(() => {
+  const { toggleTheme } = useThemeToggle({
+    variant: "circle",
+    start: "top-right",
+  });
+
+  const handleToggle = useCallback(() => {
     playClick(0.5);
-    setTheme(resolvedTheme === "dark" ? "light" : "dark");
+    toggleTheme();
     setMetaColor(
       resolvedTheme === "dark"
         ? META_THEME_COLORS.light
         : META_THEME_COLORS.dark
     );
-  }, [resolvedTheme, setTheme, setMetaColor, playClick]);
+  }, [resolvedTheme, toggleTheme, setMetaColor, playClick]);
 
-  useHotkeys("d", switchTheme);
+  useHotkeys("d", handleToggle);
 
   return (
     <Tooltip>
       <TooltipTrigger
-        render={
-          <Button
-            variant="ghost"
-            size="icon"
-            onClick={switchTheme}
-            // onClick={() => {
-            //   if (!document.startViewTransition) switchTheme();
-            //   document.startViewTransition(switchTheme);
-            // }}
-          />
-        }
+        render={<Button variant="ghost" size="icon" onClick={handleToggle} />}
       >
         <MoonIcon className="relative hidden after:absolute after:-inset-2 [html.dark_&]:block" />
         <SunMediumIcon className="relative hidden after:absolute after:-inset-2 [html.light_&]:block" />
         <span className="sr-only">Theme Toggle</span>
       </TooltipTrigger>
-
       <TooltipContent className="pr-2 pl-3">
         <div className="flex items-center gap-3">
           Toggle Mode

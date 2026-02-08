@@ -1,5 +1,7 @@
 import type { ProfilePage as PageSchema, WithContext } from "schema-dts";
 
+import { PatternSeparator } from "@/components/pattern-separator";
+import { Separator } from "@/components/ui/separator";
 import { GITHUB_USERNAME } from "@/config/site";
 import { About } from "@/features/portfolio/components/about";
 import { Blog } from "@/features/portfolio/components/blog";
@@ -32,49 +34,46 @@ export default async function Page() {
         }}
       />
 
-      <div className="mx-auto md:max-w-3xl *:[[id]]:scroll-mt-22">
+      <div className="*:[[id]]:scroll-mt-22">
         <ProfileCover />
         <ProfileHeader />
-        <Separator className="h-8 before:h-8" />
+        <PatternSeparator className="h-8 before:h-8" />
 
         <Overview />
-        <Separator className="h-8 before:h-8" />
+        <PatternSeparator className="h-8 before:h-8" />
 
         <SocialLinks />
-        <Separator className="h-8 before:h-8" />
+        <PatternSeparator className="h-8 before:h-8" />
 
         <About />
-        <Separator />
+        <PatternSeparator />
 
         {/* <TestimonialsMarquee /> */}
-        <Separator />
+        <PatternSeparator />
 
         <GitHubContributions contributions={githubData.contributions} />
-        <Separator />
+        <PatternSeparator />
 
         {/* <TeckStack /> */}
         {/* <Separator /> */}
 
         {/* <Components /> */}
-        {/* <Separator /> */}
+        <Separator />
 
         {/* <Blog /> */}
-        <Separator />
+        <PatternSeparator />
 
         <Experiences />
+        <PatternSeparator />
         <Separator />
-
         <Projects />
-        <Separator />
+        <PatternSeparator />
 
         <RecentPrs prs={githubData.recentPrs} />
-        <Separator />
+        <PatternSeparator />
 
         <Certifications />
-        <Separator />
-
-
-
+        <PatternSeparator />
 
         {/* <Brand /> */}
         {/* <Separator /> */}
@@ -96,17 +95,4 @@ function getPageJsonLd(): WithContext<PageSchema> {
       image: USER.avatar,
     },
   };
-}
-
-function Separator({ className }: { className?: string }) {
-  return (
-    <div
-      className={cn(
-        "relative flex h-24 w-full border-x border-edge",
-        "before:absolute before:-left-[100vw] before:-z-1 before:h-24 before:w-[200vw]",
-        "before:bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] before:bg-size-[10px_10px] before:[--pattern-foreground:var(--color-edge)]/56",
-        className
-      )}
-    />
-  );
 }
