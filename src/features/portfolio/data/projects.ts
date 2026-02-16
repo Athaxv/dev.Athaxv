@@ -15,14 +15,14 @@ export const PROJECTS: Project[] = [
   },
   {
     id: "ClaudeCode",
-    title: "Claude",
+    title: "Claude Code",
     description: "AI Deterministic UI Generation Tool",
     link: "https://claude-code-frontend.vercel.app/",
     skills: ["TypeScript", "AST", "Deterministic UI", "Streaming"],
     period: {
       start: "2026",
     },
-    image: "/edit/claude2.jpg",
+    image: "/edit/claude5.jpg",
   },
   {
     id: "exaclidraw",
