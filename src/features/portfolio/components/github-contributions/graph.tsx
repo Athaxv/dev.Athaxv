@@ -22,10 +22,10 @@ import { cn } from "@/lib/utils";
 import { addQueryParams } from "@/utils/url";
 
 const THEME_CLASS = cn(
-  "data-[level='0']:fill-opacity-10 data-[level='0']:fill-primary",
-  "data-[level='1']:fill-opacity-30 data-[level='1']:fill-primary",
-  "data-[level='2']:fill-opacity-50 data-[level='2']:fill-primary",
-  "data-[level='3']:fill-opacity-70 data-[level='3']:fill-primary",
+  "data-[level='0']:fill-secondary",
+  "data-[level='1']:fill-primary/30",
+  "data-[level='2']:fill-primary/50",
+  "data-[level='3']:fill-primary/70",
   "data-[level='4']:fill-primary"
 );
 
