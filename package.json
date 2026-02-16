@@ -1,24 +1,24 @@
 {
-  "name": "chanhdai.com",
+  "name": "safeedaadmi.dev",
   "version": "0.1.0",
   "description": "A minimal, pixel-perfect dev portfolio, component registry, and blog.",
-  "homepage": "https://chanhdai.com",
+  "homepage": "https://safeedaadmi.dev",
   "license": "MIT",
   "author": {
-    "name": "Nguyen Chanh Dai",
-    "email": "dai@chanhdai.com",
-    "url": "https://github.com/ncdai"
+    "name": "Athaxv",
+    "email": "contact@safeedaadmi.dev",
+    "url": "https://github.com/Athaxv"
   },
   "contributors": [
     {
-      "name": "Nguyen Chanh Dai",
-      "email": "dai@chanhdai.com",
-      "url": "https://github.com/ncdai"
+      "name": "Athaxv",
+      "email": "contact@safeedaadmi.dev",
+      "url": "https://github.com/Athaxv"
     }
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ncdai/chanhdai.com.git"
+    "url": "git+https://github.com/Athaxv/dev.profile.git"
   },
   "scripts": {
     "dev": "next dev -p 1408",
@@ -55,6 +55,7 @@
     "fumadocs-core": "^16.0.0",
     "geist": "^1.5.1",
     "jotai": "^2.12.5",
+    "lenis": "^1.3.17",
     "libphonenumber-js": "^1.12.4",
     "lucide-react": "^0.544.0",
     "motion": "^12.18.1",

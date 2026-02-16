@@ -26,6 +26,7 @@ export function ProfileCover() {
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
       </div>
 
@@ -37,6 +38,7 @@ export function ProfileCover() {
           fill
           className="object-cover"
           priority
+          sizes="100vw"
         />
       </div>
     </div>

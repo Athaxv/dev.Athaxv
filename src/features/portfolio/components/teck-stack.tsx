@@ -51,7 +51,6 @@ export function TeckStack() {
                               width={32}
                               height={32}
                               className="hidden size-8 [html.light_&]:block"
-                              unoptimized
                             />
                             <Image
                               src={`https://assets.safeedaadmi.dev/images/tech-stack-icons/${tech.key}-dark.svg`}
@@ -59,7 +58,6 @@ export function TeckStack() {
                               width={32}
                               height={32}
                               className="hidden size-8 [html.dark_&]:block"
-                              unoptimized
                             />
                           </>
                         ) : (
@@ -69,7 +67,6 @@ export function TeckStack() {
                             width={32}
                             height={32}
                             className="size-8"
-                            unoptimized
                           />
                         )}
                       </TooltipTrigger>

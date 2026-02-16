@@ -1,12 +1,11 @@
 "use client";
 
-// import { ReactLenis } from "lenis/react";
+import { ReactLenis } from "lenis/react";
 
 export function SmoothScroll({ children }: { children: React.ReactNode }) {
-  // ReactLenis disabled due to memory leak/import issues.
   return (
-    // <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
-    children
-    // </ReactLenis>
+    <ReactLenis root options={{ lerp: 0.1, duration: 1.5, smoothWheel: true }}>
+      {children}
+    </ReactLenis>
   );
 }

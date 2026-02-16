@@ -1,13 +1,12 @@
 {
   "$schema": "https://ui.shadcn.com/schema/registry.json",
-  "name": "ncdai",
-  "homepage": "https://chanhdai.com/components",
+  "name": "Athaxv",
+  "homepage": "https://safeedaadmi.dev/components",
   "items": [
     {
       "name": "utils",
-      "type": "registry:lib",
       "title": "Utility Functions",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "dependencies": [
         "clsx",
         "tailwind-merge"
@@ -17,11 +16,11 @@
           "path": "src/lib/utils.ts",
           "type": "registry:lib"
         }
-      ]
+      ],
+      "type": "registry:lib"
     },
     {
       "name": "use-controllable-state",
-      "type": "registry:hook",
       "title": "Controllable State Hook",
       "files": [
         {
@@ -32,11 +31,11 @@
           "path": "src/hooks/use-controllable-state.ts",
           "type": "registry:hook"
         }
-      ]
+      ],
+      "type": "registry:hook"
     },
     {
       "name": "use-sound",
-      "type": "registry:hook",
       "title": "Sound Hook",
       "description": "Custom React hook to load and play a sound from a given URL using the Web Audio API.",
       "files": [
@@ -44,13 +43,13 @@
           "path": "src/hooks/use-sound.ts",
           "type": "registry:hook"
         }
-      ]
+      ],
+      "type": "registry:hook"
     },
     {
       "name": "theme-switcher",
-      "type": "registry:component",
       "title": "Theme Switcher",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "A theme switcher component for Next.js apps with next-themes and Tailwind CSS, supporting system, light, and dark modes.",
       "dependencies": [
         "next-themes",
@@ -58,7 +57,7 @@
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@Athaxv/utils"
       ],
       "files": [
         {
@@ -66,37 +65,37 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/theme-switcher-component"
+      "docs": "https://safeedaadmi.dev/components/theme-switcher-component",
+      "type": "registry:component"
     },
     {
       "name": "flip-sentences",
-      "type": "registry:component",
       "title": "Flip Sentences",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@Athaxv/utils"
       ],
       "files": [
         {
           "path": "src/registry/flip-sentences/flip-sentences.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "apple-hello-effect",
-      "type": "registry:component",
       "title": "Apple Hello Effect",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "Create a Xin chào and Hello writing effect inspired by Apple using Motion for React.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@Athaxv/utils"
       ],
       "files": [
         {
@@ -104,19 +103,19 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/apple-hello-effect"
+      "docs": "https://safeedaadmi.dev/components/apple-hello-effect",
+      "type": "registry:component"
     },
     {
       "name": "wheel-picker",
-      "type": "registry:component",
       "title": "Wheel Picker",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "iOS-like wheel picker for React with smooth inertia scrolling and infinite loop support.",
       "dependencies": [
-        "@ncdai/react-wheel-picker"
+        "@Athaxv/react-wheel-picker"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@Athaxv/utils"
       ],
       "files": [
         {
@@ -124,13 +123,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/react-wheel-picker"
+      "docs": "https://safeedaadmi.dev/components/react-wheel-picker",
+      "type": "registry:component"
     },
     {
       "name": "work-experience",
-      "type": "registry:component",
       "title": "Work Experience",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "Displays a list of work experiences with role details and durations.",
       "dependencies": [
         "react-markdown",
@@ -141,7 +140,7 @@
         "tw-animate-css"
       ],
       "registryDependencies": [
-        "@ncdai/utils",
+        "@Athaxv/utils",
         "collapsible",
         "separator"
       ],
@@ -169,39 +168,39 @@
         "@import \"tw-animate-css\"": {},
         "@plugin @tailwindcss/typography": {}
       },
-      "docs": "https://chanhdai.com/components/work-experience-component"
+      "docs": "https://safeedaadmi.dev/components/work-experience-component",
+      "type": "registry:component"
     },
     {
       "name": "shimmering-text",
-      "type": "registry:component",
       "title": "Shimmering Text",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "Smooth shimmering text animation built with Motion.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils"
+        "@Athaxv/utils"
       ],
       "files": [
         {
           "path": "src/registry/shimmering-text/shimmering-text.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "slide-to-unlock",
-      "type": "registry:component",
       "title": "Slide to Unlock",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "A sleek, interactive slider inspired by the classic iPhone OS 'slide to unlock' gesture.",
       "dependencies": [
         "motion"
       ],
       "registryDependencies": [
-        "@ncdai/utils",
-        "@ncdai/shimmering-text"
+        "@Athaxv/utils",
+        "@Athaxv/shimmering-text"
       ],
       "files": [
         {
@@ -209,16 +208,16 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/slide-to-unlock"
+      "docs": "https://safeedaadmi.dev/components/slide-to-unlock",
+      "type": "registry:component"
     },
     {
       "name": "testimonials-marquee",
-      "type": "registry:component",
       "title": "Testimonials Marquee",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "A testimonials marquee component for showcasing user feedback in a scrolling format.",
       "registryDependencies": [
-        "@ncdai/utils",
+        "@Athaxv/utils",
         "@kibo-ui/marquee"
       ],
       "files": [
@@ -227,13 +226,13 @@
           "type": "registry:component"
         }
       ],
-      "docs": "https://chanhdai.com/components/testimonials-marquee"
+      "docs": "https://safeedaadmi.dev/components/testimonials-marquee",
+      "type": "registry:component"
     },
     {
       "name": "github-stars",
-      "type": "registry:component",
       "title": "GitHub Stars",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "Display GitHub repository star count with formatted numbers and a tooltip showing the full count.",
       "registryDependencies": [
         "button",
@@ -244,16 +243,16 @@
           "path": "src/registry/github-stars/github-stars.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:component"
     },
     {
       "name": "scroll-fade-effect",
-      "type": "registry:component",
       "title": "Scroll Fade Effect",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "A React component that adds a fade effect to content as you scroll.",
       "registryDependencies": [
-        "@ncdai/utils"
+        "@Athaxv/utils"
       ],
       "files": [
         {
@@ -334,19 +333,19 @@
           "animation-range": "0 var(--scroll-buffer), calc(100% - var(--scroll-buffer)) 100%",
           "animation-fill-mode": "both"
         }
-      }
+      },
+      "type": "registry:component"
     },
     {
       "name": "consent-manager",
-      "type": "registry:component",
       "title": "Consent Manager",
-      "author": "ncdai <dai@chanhdai.com>",
+      "author": "Athaxv <contact@safeedaadmi.dev>",
       "description": "A React component for managing user consent for cookies and tracking in Next.js applications.",
       "dependencies": [
         "@c15t/nextjs"
       ],
       "registryDependencies": [
-        "@ncdai/utils",
+        "@Athaxv/utils",
         "button"
       ],
       "files": [
@@ -372,31 +371,31 @@
           "popover-border": "oklch(0.37 0.013 285.805)",
           "shadow-popover": "0 0 24px rgba(0, 0, 0, 0.5)"
         }
-      }
+      },
+      "type": "registry:component"
     },
     {
       "name": "wheel-picker-block-01",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/wheel-picker"
+        "@Athaxv/wheel-picker"
       ],
       "files": [
         {
           "path": "src/registry/examples/wheel-picker-demo.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "wheel-picker-block-02",
-      "type": "registry:block",
       "dependencies": [
         "react-hook-form",
         "@hookform/resolvers",
         "zod"
       ],
       "registryDependencies": [
-        "@ncdai/wheel-picker",
+        "@Athaxv/wheel-picker",
         "form",
         "button",
         "sonner"
@@ -406,144 +405,144 @@
           "path": "src/registry/examples/wheel-picker-form-demo.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "work-experience-block-01",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/work-experience"
+        "@Athaxv/work-experience"
       ],
       "files": [
         {
           "path": "src/registry/examples/work-experience-demo.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "shimmering-text-block-01",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/shimmering-text"
+        "@Athaxv/shimmering-text"
       ],
       "files": [
         {
           "path": "src/registry/examples/shimmering-text-demo-01.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "shimmering-text-block-02",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/shimmering-text"
+        "@Athaxv/shimmering-text"
       ],
       "files": [
         {
           "path": "src/registry/examples/shimmering-text-demo-02.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "slide-to-unlock-block-01",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock",
-        "@ncdai/use-sound"
+        "@Athaxv/slide-to-unlock",
+        "@Athaxv/use-sound"
       ],
       "files": [
         {
           "path": "src/registry/examples/slide-to-unlock-demo-01.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "slide-to-unlock-block-02",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock"
+        "@Athaxv/slide-to-unlock"
       ],
       "files": [
         {
           "path": "src/registry/examples/slide-to-unlock-demo-02.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "slide-to-unlock-block-03",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/slide-to-unlock"
+        "@Athaxv/slide-to-unlock"
       ],
       "files": [
         {
           "path": "src/registry/examples/slide-to-unlock-demo-03.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "testimonials-marquee-block-01",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/testimonials-marquee"
+        "@Athaxv/testimonials-marquee"
       ],
       "files": [
         {
           "path": "src/registry/examples/testimonials-marquee-demo-01.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "testimonials-marquee-block-02",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/testimonials-marquee"
+        "@Athaxv/testimonials-marquee"
       ],
       "files": [
         {
           "path": "src/registry/examples/testimonials-marquee-demo-02.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "scroll-fade-effect-block-01",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect"
+        "@Athaxv/scroll-fade-effect"
       ],
       "files": [
         {
           "path": "src/registry/examples/scroll-fade-effect-demo-01.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "scroll-fade-effect-block-02",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect"
+        "@Athaxv/scroll-fade-effect"
       ],
       "files": [
         {
           "path": "src/registry/examples/scroll-fade-effect-demo-02.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "scroll-fade-effect-block-03",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect",
+        "@Athaxv/scroll-fade-effect",
         "scroll-area",
         "separator"
       ],
@@ -552,13 +551,13 @@
           "path": "src/registry/examples/scroll-fade-effect-demo-03.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     },
     {
       "name": "scroll-fade-effect-block-04",
-      "type": "registry:block",
       "registryDependencies": [
-        "@ncdai/scroll-fade-effect",
+        "@Athaxv/scroll-fade-effect",
         "scroll-area"
       ],
       "files": [
@@ -566,7 +565,8 @@
           "path": "src/registry/examples/scroll-fade-effect-demo-04.tsx",
           "type": "registry:component"
         }
-      ]
+      ],
+      "type": "registry:block"
     }
   ]
 }

@@ -44,7 +44,7 @@ export function ProjectItem({
               height={315}
               quality={100}
               className="aspect-video w-full object-cover transition-transform duration-500 group-hover/project:scale-105"
-              unoptimized
+              sizes="(max-width: 768px) 100vw, 50vw"
             />
           </div>
         )}
@@ -57,8 +57,7 @@ export function ProjectItem({
               width={32}
               height={32}
               quality={100}
-              className="flex size-8 shrink-0 select-none rounded-md object-contain"
-              unoptimized
+              className="flex size-8 shrink-0 rounded-md object-contain select-none"
               aria-hidden="true"
             />
           ) : (
@@ -69,7 +68,7 @@ export function ProjectItem({
               <BoxIcon className="size-5" />
             </div>
           )}
-          <h3 className="text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/project:underline font-sans">
+          <h3 className="font-sans text-lg leading-snug font-medium text-balance underline-offset-4 group-hover/project:underline">
             {project.title}
           </h3>
         </div>
@@ -82,7 +81,7 @@ export function ProjectItem({
           </div>
         )}
 
-        <div className="mt-2 flex flex-wrap items-center gap-y-2 gap-x-3 text-xs">
+        <div className="mt-2 flex flex-wrap items-center gap-x-3 gap-y-2 text-xs">
           <dl className="text-muted-foreground">
             <dt className="sr-only">Period</dt>
             <dd className="flex items-center gap-0.5">
@@ -107,7 +106,7 @@ export function ProjectItem({
           </dl>
 
           {project.skills.length > 0 && (
-            <ul className="flex flex-wrap gap-1.5 grayscale opacity-80 transition-all group-hover/project:grayscale-0 group-hover/project:opacity-100">
+            <ul className="flex flex-wrap gap-1.5 opacity-80 grayscale transition-all group-hover/project:opacity-100 group-hover/project:grayscale-0">
               {project.skills.map((skill, index) => (
                 <li key={index}>
                   <Tag className="h-5 px-1.5 text-[10px]">{skill}</Tag>
