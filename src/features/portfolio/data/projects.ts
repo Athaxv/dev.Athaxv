@@ -14,16 +14,15 @@ export const PROJECTS: Project[] = [
     image: "/images/new_startup.png",
   },
   {
-    id: "path-ai",
-    title: "PathAI",
-    description:
-      "An AI-powered career coach that helps users generate cover letters, resumes, and prepare for quizzes.",
-    link: "https://path-ai-brown.vercel.app/",
-    skills: ["JavaScript", "AI", "Career"],
+    id: "ClaudeCode",
+    title: "Claude",
+    description: "AI Deterministic UI Generation Tool",
+    link: "https://claude-code-frontend.vercel.app/",
+    skills: ["TypeScript", "AST", "Deterministic UI", "Streaming"],
     period: {
-      start: "2024",
+      start: "2026",
     },
-    image: "/images/new_path.png",
+    image: "/edit/claude2.jpg",
   },
   {
     id: "exaclidraw",

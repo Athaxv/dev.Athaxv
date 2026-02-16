@@ -1,47 +1,44 @@
 "use client";
 
-import { useRef } from "react";
+import Image from "next/image";
 
-import { BrandContextMenu } from "@/components/brand-context-menu";
-import { VisitorBadge } from "@/components/visitor-badge";
 import { cn } from "@/lib/utils";
 
+/* src/features/portfolio/components/profile-cover.tsx */
+// ... imports
+
 export function ProfileCover() {
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  const handleEnded = () => {
-    if (videoRef.current) {
-      videoRef.current.currentTime = 0;
-      videoRef.current.play();
-    }
-  };
-
   return (
-    <BrandContextMenu>
-      <div
-        className={cn(
-          "aspect-2/1 border-x border-edge select-none sm:aspect-3/1",
-          "flex items-center justify-center text-black dark:text-white",
-          "screen-line-before screen-line-after before:-top-px after:-bottom-px",
-          "bg-black/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5",
-          "relative overflow-hidden"
-        )}
-      >
-        <video
-          ref={videoRef}
-          autoPlay
-          muted
-          loop
-          playsInline
-          preload="auto"
-          onEnded={handleEnded}
-          className="absolute inset-0 size-full object-cover"
-        >
-          <source src="/edit/choice.mp4" type="video/mp4" />
-        </video>
-
-        <VisitorBadge />
+    <div
+      className={cn(
+        "aspect-2/1 border-x border-edge select-none sm:aspect-3/1",
+        "flex items-center justify-center text-black dark:text-white",
+        "screen-line-before screen-line-after before:-top-px after:-bottom-px",
+        "bg-black/0.75 bg-[radial-gradient(var(--pattern-foreground)_1px,transparent_0)] bg-size-[10px_10px] bg-center [--pattern-foreground:var(--color-zinc-950)]/5 dark:bg-white/0.75 dark:[--pattern-foreground:var(--color-white)]/5",
+        "relative overflow-hidden"
+      )}
+    >
+      {/* Light Mode Cover */}
+      <div className="absolute inset-0 dark:hidden">
+        <Image
+          src="/edit/cover5.jpg"
+          alt="Profile Cover Light"
+          fill
+          className="object-cover"
+          priority
+        />
       </div>
-    </BrandContextMenu>
+
+      {/* Dark Mode Cover */}
+      <div className="absolute inset-0 hidden dark:block">
+        <Image
+          src="/edit/coverD.jpg"
+          alt="Profile Cover Dark"
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
+    </div>
   );
 }
