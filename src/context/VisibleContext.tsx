@@ -1,6 +1,7 @@
 "use client";
 
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
+import type { ReactNode } from "react";
+import { createContext, useContext, useEffect, useState } from "react";
 
 interface VisibleContextType {
   visible: boolean;
@@ -14,12 +15,6 @@ export function VisibleContextProvider({ children }: { children: ReactNode }) {
 
   // Optionally, you can add logic to control visibility based on user preferences
   // For example, hide cursors when user prefers reduced motion
-  useEffect(() => {
-    const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-    if (prefersReducedMotion) {
-      setVisible(false);
-    }
-  }, []);
 
   return (
     <VisibleContext.Provider value={{ visible, setVisible }}>
@@ -35,4 +30,3 @@ export function useVisible() {
   }
   return context;
 }
-

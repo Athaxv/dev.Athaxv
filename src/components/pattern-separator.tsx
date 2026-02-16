@@ -26,6 +26,8 @@ export function VerticalPatternSeparator({
         "relative flex h-auto w-12 border-x border-edge",
         "before:absolute before:top-0 before:bottom-0 before:w-12",
         "before:bg-[repeating-linear-gradient(315deg,var(--pattern-foreground)_0,var(--pattern-foreground)_1px,transparent_0,transparent_50%)] before:bg-size-[10px_10px] before:[--pattern-foreground:var(--color-edge)]/56",
+        "[mask-image:linear-gradient(to_bottom,transparent,black_20rem,black_calc(100%-20rem),transparent)]",
+        "bg-muted/10 backdrop-blur-sm",
         className
       )}
     />

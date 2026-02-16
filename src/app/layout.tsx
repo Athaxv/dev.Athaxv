@@ -7,6 +7,7 @@ import type { WebSite, WithContext } from "schema-dts";
 
 import { ConsentManager } from "@/components/consent-manager";
 import { Providers } from "@/components/providers";
+import { SmoothScroll } from "@/components/smooth-scroll";
 import { META_THEME_COLORS, SITE_INFO } from "@/config/site";
 import { USER } from "@/features/portfolio/data/user";
 import { fontMono, fontSerif } from "@/lib/fonts";
@@ -133,11 +134,13 @@ export default function RootLayout({
       </head>
 
       <body>
-        <Providers>
-          <NuqsAdapter>
-            <ConsentManager>{children}</ConsentManager>
-          </NuqsAdapter>
-        </Providers>
+        <SmoothScroll>
+          <Providers>
+            <NuqsAdapter>
+              <ConsentManager>{children}</ConsentManager>
+            </NuqsAdapter>
+          </Providers>
+        </SmoothScroll>
       </body>
     </html>
   );

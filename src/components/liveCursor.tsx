@@ -205,37 +205,35 @@ export default function LiveCursor() {
 
         if (distance < nekoSpeed || distance < 48) {
           handleIdle();
-          setNekoPos({ ...nekoPosRef.current });
-          return;
+          // Idle: Only update sprite (DOM), NO state update (re-render)
+        } else {
+          idleAnimationRef.current = null;
+          idleAnimationFrameRef.current = 0;
+
+          if (idleTimeRef.current > 1) {
+            setSpriteFrame("alert", 0);
+            idleTimeRef.current = Math.min(idleTimeRef.current, 7);
+            idleTimeRef.current -= 1;
+            setNekoPos({ ...nekoPosRef.current });
+          } else {
+            let direction = "";
+            direction += diffY / distance > 0.5 ? "N" : "";
+            direction += diffY / distance < -0.5 ? "S" : "";
+            direction += diffX / distance > 0.5 ? "W" : "";
+            direction += diffX / distance < -0.5 ? "E" : "";
+
+            setSpriteFrame(direction || "idle", frameCountRef.current);
+
+            const newX = nekoPosRef.current.x - (diffX / distance) * nekoSpeed;
+            const newY = nekoPosRef.current.y - (diffY / distance) * nekoSpeed;
+
+            nekoPosRef.current = {
+              x: Math.min(Math.max(16, newX), window.innerWidth - 16),
+              y: Math.min(Math.max(16, newY), window.innerHeight - 16),
+            };
+            setNekoPos({ ...nekoPosRef.current });
+          }
         }
-
-        idleAnimationRef.current = null;
-        idleAnimationFrameRef.current = 0;
-
-        if (idleTimeRef.current > 1) {
-          setSpriteFrame("alert", 0);
-          idleTimeRef.current = Math.min(idleTimeRef.current, 7);
-          idleTimeRef.current -= 1;
-          setNekoPos({ ...nekoPosRef.current });
-          return;
-        }
-
-        let direction = "";
-        direction += diffY / distance > 0.5 ? "N" : "";
-        direction += diffY / distance < -0.5 ? "S" : "";
-        direction += diffX / distance > 0.5 ? "W" : "";
-        direction += diffX / distance < -0.5 ? "E" : "";
-
-        setSpriteFrame(direction || "idle", frameCountRef.current);
-
-        const newX = nekoPosRef.current.x - (diffX / distance) * nekoSpeed;
-        const newY = nekoPosRef.current.y - (diffY / distance) * nekoSpeed;
-
-        nekoPosRef.current = {
-          x: Math.min(Math.max(16, newX), window.innerWidth - 16),
-          y: Math.min(Math.max(16, newY), window.innerHeight - 16),
-        };
-        setNekoPos({ ...nekoPosRef.current });
       }
 
       animationFrameRef.current = requestAnimationFrame(animate);
