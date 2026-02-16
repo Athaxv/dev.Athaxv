@@ -4,7 +4,7 @@ export const blocks: Registry["items"] = [
   {
     name: "wheel-picker-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/wheel-picker"],
+    registryDependencies: ["@Athaxv/wheel-picker"],
     files: [
       {
         path: "examples/wheel-picker-demo.tsx",
@@ -16,7 +16,7 @@ export const blocks: Registry["items"] = [
     name: "wheel-picker-block-02",
     type: "registry:block",
     dependencies: ["react-hook-form", "@hookform/resolvers", "zod"],
-    registryDependencies: ["@ncdai/wheel-picker", "form", "button", "sonner"],
+    registryDependencies: ["@Athaxv/wheel-picker", "form", "button", "sonner"],
     files: [
       {
         path: "examples/wheel-picker-form-demo.tsx",
@@ -27,7 +27,7 @@ export const blocks: Registry["items"] = [
   {
     name: "work-experience-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/work-experience"],
+    registryDependencies: ["@Athaxv/work-experience"],
     files: [
       {
         path: "examples/work-experience-demo.tsx",
@@ -38,7 +38,7 @@ export const blocks: Registry["items"] = [
   {
     name: "shimmering-text-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/shimmering-text"],
+    registryDependencies: ["@Athaxv/shimmering-text"],
     files: [
       {
         path: "examples/shimmering-text-demo-01.tsx",
@@ -49,7 +49,7 @@ export const blocks: Registry["items"] = [
   {
     name: "shimmering-text-block-02",
     type: "registry:block",
-    registryDependencies: ["@ncdai/shimmering-text"],
+    registryDependencies: ["@Athaxv/shimmering-text"],
     files: [
       {
         path: "examples/shimmering-text-demo-02.tsx",
@@ -60,7 +60,7 @@ export const blocks: Registry["items"] = [
   {
     name: "slide-to-unlock-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/slide-to-unlock", "@ncdai/use-sound"],
+    registryDependencies: ["@Athaxv/slide-to-unlock", "@Athaxv/use-sound"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-01.tsx",
@@ -71,7 +71,7 @@ export const blocks: Registry["items"] = [
   {
     name: "slide-to-unlock-block-02",
     type: "registry:block",
-    registryDependencies: ["@ncdai/slide-to-unlock"],
+    registryDependencies: ["@Athaxv/slide-to-unlock"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-02.tsx",
@@ -82,7 +82,7 @@ export const blocks: Registry["items"] = [
   {
     name: "slide-to-unlock-block-03",
     type: "registry:block",
-    registryDependencies: ["@ncdai/slide-to-unlock"],
+    registryDependencies: ["@Athaxv/slide-to-unlock"],
     files: [
       {
         path: "examples/slide-to-unlock-demo-03.tsx",
@@ -93,7 +93,7 @@ export const blocks: Registry["items"] = [
   {
     name: "testimonials-marquee-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/testimonials-marquee"],
+    registryDependencies: ["@Athaxv/testimonials-marquee"],
     files: [
       {
         path: "examples/testimonials-marquee-demo-01.tsx",
@@ -104,7 +104,7 @@ export const blocks: Registry["items"] = [
   {
     name: "testimonials-marquee-block-02",
     type: "registry:block",
-    registryDependencies: ["@ncdai/testimonials-marquee"],
+    registryDependencies: ["@Athaxv/testimonials-marquee"],
     files: [
       {
         path: "examples/testimonials-marquee-demo-02.tsx",
@@ -115,7 +115,7 @@ export const blocks: Registry["items"] = [
   {
     name: "scroll-fade-effect-block-01",
     type: "registry:block",
-    registryDependencies: ["@ncdai/scroll-fade-effect"],
+    registryDependencies: ["@Athaxv/scroll-fade-effect"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-01.tsx",
@@ -126,7 +126,7 @@ export const blocks: Registry["items"] = [
   {
     name: "scroll-fade-effect-block-02",
     type: "registry:block",
-    registryDependencies: ["@ncdai/scroll-fade-effect"],
+    registryDependencies: ["@Athaxv/scroll-fade-effect"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-02.tsx",
@@ -138,7 +138,7 @@ export const blocks: Registry["items"] = [
     name: "scroll-fade-effect-block-03",
     type: "registry:block",
     registryDependencies: [
-      "@ncdai/scroll-fade-effect",
+      "@Athaxv/scroll-fade-effect",
       "scroll-area",
       "separator",
     ],
@@ -152,7 +152,7 @@ export const blocks: Registry["items"] = [
   {
     name: "scroll-fade-effect-block-04",
     type: "registry:block",
-    registryDependencies: ["@ncdai/scroll-fade-effect", "scroll-area"],
+    registryDependencies: ["@Athaxv/scroll-fade-effect", "scroll-area"],
     files: [
       {
         path: "examples/scroll-fade-effect-demo-04.tsx",
