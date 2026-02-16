@@ -17,9 +17,10 @@ export function VisitorCounter() {
         if (!res.ok) throw new Error("Failed to fetch visitor count");
         return res.json();
       })
-      .then((data) => {
-        if (data && typeof data.count === "number") {
-          setCount(data.count);
+      .then((data: unknown) => {
+        const payload = data as { count?: number };
+        if (payload && typeof payload.count === "number") {
+          setCount(payload.count);
           if (!hasCounted) {
             sessionStorage.setItem("visitor-counted", "true");
           }

@@ -1,4 +1,3 @@
-import type { MDXRemoteProps } from "next-mdx-remote/rsc";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import rehypeExternalLinks from "rehype-external-links";
 import type { LineElement } from "rehype-pretty-code";
@@ -51,7 +50,7 @@ import { CopyButton } from "./copy-button";
 import { FramedImage, IframeEmbed, YouTubeEmbed } from "./embed";
 import { getIconForLanguageExtension, Icons } from "./icons";
 
-const components: MDXRemoteProps["components"] = {
+const components = {
   h1: (props: React.ComponentProps<"h1">) => <Heading as="h1" {...props} />,
   h2: (props: React.ComponentProps<"h2">) => <Heading as="h2" {...props} />,
   h3: (props: React.ComponentProps<"h3">) => <Heading as="h3" {...props} />,
@@ -136,7 +135,7 @@ const components: MDXRemoteProps["components"] = {
   ComponentSource,
   CodeCollapsibleWrapper,
   CodeTabs,
-  Steps: (props) => (
+  Steps: (props: React.ComponentProps<"div">) => (
     <div
       className="md:ml-3.5 md:border-l md:pl-7.5 prose-h3:text-lg prose-h3:text-wrap"
       {...props}
@@ -178,7 +177,7 @@ const components: MDXRemoteProps["components"] = {
   TestimonialVerifiedBadge,
 };
 
-const options: MDXRemoteProps["options"] = {
+const options = {
   mdxOptions: {
     remarkPlugins: [remarkGfm, remarkCodeImport],
     rehypePlugins: [
@@ -188,7 +187,8 @@ const options: MDXRemoteProps["options"] = {
       ],
       rehypeSlug,
       rehypeComponent,
-      () => (tree) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      () => (tree: any) => {
         visit(tree, (node) => {
           if (node?.type === "element" && node?.tagName === "pre") {
             const [codeEl] = node.children;
@@ -217,7 +217,8 @@ const options: MDXRemoteProps["options"] = {
           },
         },
       ],
-      () => (tree) => {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      () => (tree: any) => {
         visit(tree, (node) => {
           if (node?.type === "element" && node?.tagName === "figure") {
             if (!("data-rehype-pretty-code-figure" in node.properties)) {
@@ -237,7 +238,8 @@ const options: MDXRemoteProps["options"] = {
       },
       rehypeNpmCommand,
       [rehypeAddQueryParams, UTM_PARAMS],
-    ],
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    ] as any,
   },
 };
 
