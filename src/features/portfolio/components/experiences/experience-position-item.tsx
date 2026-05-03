@@ -1,4 +1,5 @@
 import { InfinityIcon } from "lucide-react";
+import Image from "next/image";
 import React from "react";
 
 import { Markdown } from "@/components/markdown";
@@ -16,10 +17,22 @@ import { cn } from "@/lib/utils";
 import type { ExperiencePosition } from "../../types/experiences";
 import { ExperienceIcon } from "./experience-position-icon";
 
+const logoTileClassName = cn(
+  "relative flex size-6 shrink-0 items-center justify-center overflow-hidden rounded-none",
+  "bg-muted text-muted-foreground",
+  "border border-muted-foreground/15 ring-1 ring-edge ring-offset-1 ring-offset-background"
+);
+
 export function ExperiencePositionItem({
   position,
+  companyLogo,
+  companyName,
+  isCurrentEmployer,
 }: {
   position: ExperiencePosition;
+  companyLogo?: string;
+  companyName?: string;
+  isCurrentEmployer?: boolean;
 }) {
   const { start, end } = position.employmentPeriod;
   const isOngoing = !end;
@@ -34,19 +47,33 @@ export function ExperiencePositionItem({
           )}
         >
           <div className="relative z-1 mb-1 flex items-center gap-3">
-            <div
-              className={cn(
-                "flex size-6 shrink-0 items-center justify-center rounded-lg",
-                "bg-muted text-muted-foreground",
-                "border border-muted-foreground/15 ring-1 ring-edge ring-offset-1 ring-offset-background"
+            <div className={logoTileClassName}>
+              {companyLogo ? (
+                <Image
+                  src={companyLogo}
+                  alt={companyName ?? position.title}
+                  width={24}
+                  height={24}
+                  quality={100}
+                  className="size-full object-cover"
+                  unoptimized
+                />
+              ) : (
+                <span aria-hidden>
+                  <ExperienceIcon className="size-4" icon={position.icon} />
+                </span>
               )}
-              aria-hidden
-            >
-              <ExperienceIcon className="size-4" icon={position.icon} />
             </div>
 
-            <h4 className="flex-1 font-medium text-balance">
-              {position.title}
+            <h4 className="flex min-w-0 flex-1 items-center gap-2 font-medium text-balance">
+              <span className="min-w-0">{position.title}</span>
+              {isCurrentEmployer && (
+                <span className="relative inline-flex shrink-0 items-center justify-center">
+                  <span className="absolute inline-flex size-3 animate-ping rounded-full bg-info opacity-50" />
+                  <span className="relative inline-flex size-2 rounded-full bg-info" />
+                  <span className="sr-only">Current Employer</span>
+                </span>
+              )}
             </h4>
 
             <div

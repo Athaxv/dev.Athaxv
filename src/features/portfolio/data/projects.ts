@@ -2,16 +2,15 @@ import type { Project } from "@/features/portfolio/types/projects";
 
 export const PROJECTS: Project[] = [
   {
-    id: "startup-validator",
-    title: "Startup Idea Validator",
-    description:
-      "A full-stack web application that helps entrepreneurs validate their startup ideas using AI. It analyzes your pitch, market, and revenue model to provide scores and improvements.",
-    link: "https://ai-startup-validator.vercel.app/",
-    skills: ["JavaScript", "AI", "Fullstack"],
+    id: "memora",
+    title: "Memora",
+    description: "Knowledge Graph + Agentic Workflow Engine",
+    link: "https://memora-frontend-five.vercel.app/",
+    skills: ["Knowledge Graph", "Agentic Workflows", "TypeScript", "AI"],
     period: {
-      start: "2024",
+      start: "2026",
     },
-    image: "/images/new_startup.png",
+    image: "/proj.png",
   },
   {
     id: "ClaudeCode",

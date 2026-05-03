@@ -14,21 +14,14 @@ export const USER = {
   email: "laatharv@gmail.com", // laatharv@gmail.com base64
   website: "https://athaxv.dev",
   jobTitle: "Fullstack Developer",
-  jobs: [
-    {
-      title: "Fullstack Developer",
-      company: "Freelance",
-      website: "https://athaxv.dev",
-    },
-  ],
+  jobs: [],
   about: `
-- **Fullstack Developer** with a passion for VibeCoding, Learning new tech daily. Obsessed with scalable systems and clean architecture.
-- I build things that should exist. If it can be **shipped**, I’ll ship it.
-- I can build almost anything — I just need a **Mac**.
-- Recent works include:
-  - Currently freelancing, contributing to open-source, and cutting Crawlbot into something lean and useful
-  - building **Notes.io**: AI-powered multilingual note-generating application.
-- Open to paid roles, early teams, and collaborations.
+- Full stack developer building AI-first products and scalable systems.
+- Strong focus on system design, architecture trade-offs, and maintainable engineering.
+- Hands-on with agentic workflows, knowledge graph style products, and full-stack delivery.
+- Currently building in stealth.
+- Building **DevOps** to improve reliability, deployment speed, and production readiness.
+- Open to full stack and AI engineering roles.
 `,
   avatar: "https://github.com/Athaxv.png",
   ogImage: "https://github.com/Athaxv.png",

@@ -3,43 +3,45 @@ import type { Experience } from "../types/experiences";
 export const EXPERIENCES: Experience[] = [
   {
     id: "ryze-ai",
-    companyName: "Ryze AI",
+    companyName: "RyzeAI",
     companyLogo: "/ryze-logo.png",
     positions: [
       {
-        id: "ryze-ai-full-stack-intern",
-        title: "Ryze AI",
+        id: "ryze-ai-full-stack-developer",
+        title: "Full Stack Developer",
         employmentPeriod: {
-          start: "Feb 2026",
-          end: "Apr 2026",
+          start: "February 2026",
+          end: "April 2026",
         },
         employmentType: "Full-time",
-        description: `- Built and shipped fullstack features across frontend and backend surfaces.
-- Collaborated in a remote-first workflow with cross-functional teammates.
-- Contributed to product iteration speed and developer workflow improvements.`,
+        description: `- RyzeAI, Remote (San Francisco, USA)
+- Engineered a high-performance image rendering pipeline using React virtualization, enabling smooth rendering of 100+ images simultaneously with zero perceptible lag, significantly improving UI responsiveness.
+- Designed and implemented a real-time streaming system using Server-Sent Events (SSE) with backend polling orchestration, reducing perceived response latency for AI chat workflows.
+- Implemented a usage-based billing system using Stripe, enabling scalable monetization aligned with user activity and API consumption.`,
         icon: "code",
-        skills: ["React", "Next.js", "TypeScript", "Node.js"],
+        skills: ["React", "Virtualization", "SSE", "Node.js", "Stripe"],
       },
     ],
   },
   {
     id: "nicsi",
-    companyName: "National Informatics Centre Services Inc (NICSI)",
+    companyName: "National Informatics Centre Services Inc. (NICSI)",
     companyLogo: "/nicsi-logo.png",
     positions: [
       {
-        id: "nicsi-full-stack-development-intern",
-        title: "National Informatics Centre Services Inc (NICSI)",
+        id: "nicsi-software-engineering-intern",
+        title: "Software Engineering Intern",
         employmentPeriod: {
-          start: "Jun 2025",
-          end: "Aug 2025",
+          start: "July 2025",
+          end: "August 2025",
         },
         employmentType: "Internship",
-        description: `- Worked on fullstack development tasks during an on-site internship.
-- Implemented UI and API updates with a focus on maintainable code quality.
-- Supported delivery across sprint-based engineering workflows.`,
+        description: `- National Informatics Centre Services Inc. (NICSI), New Delhi, India
+- Architected and led the development of an end-to-end AI-powered procurement automation system to digitize and streamline the entire manual workflow for the national agency.
+- Developed the full-stack application with a React/Redux frontend and a Node.js backend, containerized with Docker.
+- Overhauled the frontend state management by implementing Redux Toolkit as a single source of truth, which eliminated prop-drilling and improved application-wide data consistency and maintainability.`,
         icon: "code",
-        skills: ["React", "JavaScript", "Node.js", "REST APIs"],
+        skills: ["React", "Redux", "Redux Toolkit", "Node.js", "Docker"],
       },
     ],
   },
